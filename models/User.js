@@ -5,7 +5,7 @@ const sequelize = require('../config/connection');
 // create a user model
 class User extends Model {
   checkPassword(pw) {
-    return bcrypt.compareSync(pw, this.hashed_password);
+    return bcrypt.compareSync(pw, this.password);
   }
 }
 
@@ -23,7 +23,7 @@ User.init(
     },
     email: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
       unique: true,
       validate: {
         isEmail: true,

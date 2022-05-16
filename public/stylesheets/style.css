@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+}
+
+.body {
+  background-color: #bcb6ff;
+}
+.navbar {
+  width: 100%;
+  height: 22%;
+  background-color: #474954;
+  color: #bcb6ff;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-box {
+  display: flex;
+  margin-top: 2rem;
+  font-size: 16pt;
+  padding: 0 4rem;
+}
+
+.nav {
+  padding: 0 5rem 0 0;
+}
+
+.blog-title {
+  background-color: #bcb6ff;
+  color: #474954;
+  width: 10%;
+  text-align: center;
+  border-radius: 5px;
+  padding: 0.5em;
+  font-size: 20pt;
+  margin-top: 1rem;
+  margin-left: 4rem;
+  box-shadow: 5px 5px 5px 5px #393a42;
+}
+
+.login-form {
+  background-color: #bcb6ff;
+  padding: 0.9rem;
+  border: #474954 solid 2px;
+}
+
+.login-box {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+  align-items: center;
+  flex-direction: column;
+}
+
+.username-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.password-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-text {
+  background-color: #474954;
+  color: #bcb6ff;
+  font-size: 16pt;
+  width: 50%;
+  padding: 1rem;
+}
+
+.username-login {
+  padding: 0.5rem 18.02rem;
+}
+
+.password-login {
+  padding: 0.5rem 18.02rem;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #474954;
+  color: #bcb6ff;
+  font-size: 14pt;
+}
+
+.form-text {
+  margin: 0.5rem;
+  font-size: 14pt;
+  color: #474954;
+}
