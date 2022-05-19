@@ -1,7 +1,18 @@
-{{#each post}}
-  <div>
-    <div>{{post.title}}</div>
-    <div>{{post.username}}</div>
-    <div>{{post.created_at}}</div>
-  </div>
-{{/each}}
+<div class='single-post-list-box'>
+  {{#each post}}
+    <div class='single-post-list'>
+      <div class='title-box'>
+        <div class='title-el'>
+          <div>{{title}}</div>
+        </div>
+        <div class='date-name-el'>
+          <div class='posted-by'>Posted by {{username}} </div>
+          <div> on {{created_at}}</div>
+        </div>
+      </div>
+      <div class='content-box'>
+        <div class='content-text'>{{content}}</div>
+      </div>
+    </div>
+  {{/each}}
+</div>

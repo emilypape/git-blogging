@@ -14,7 +14,7 @@ router.get('/signup', (req, res) => {
 // homepage handlebars
 router.get('/homepage', (req, res) => {
   Post.findAll({
-    attributes: ['id', 'title', 'created_at'],
+    attributes: ['id', 'title', 'post_content', 'createdAt'],
     include: [
       {
         model: User,
@@ -25,8 +25,9 @@ router.get('/homepage', (req, res) => {
     const post = dbPostData.map((item) => {
       return {
         title: item.title,
-        created_at: item.created_at,
-        username: item.username,
+        content: item.post_content,
+        created_at: item.createdAt.toLocaleDateString(),
+        username: item.user.username,
       };
     });
     res.render('homepage', {

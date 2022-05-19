@@ -58,4 +58,10 @@ router.post('/logout', (req, res) => {
   }
 });
 
+router.get('/', (req, res) => {
+  User.findAll({
+    attributes: ['id', 'username', 'email', 'password'],
+  }).then((data) => res.json(data));
+});
+
 module.exports = router;

@@ -91,3 +91,46 @@
   font-size: 14pt;
   color: #474954;
 }
+
+.single-post-list-box {
+  display: flex;
+  justify-content: center;
+}
+
+.single-post-list {
+  display: flex;
+  flex-direction: column;
+  background-color: #474954;
+  width: 90%;
+  margin-top: 1rem;
+}
+
+.title-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title-el {
+  color: #bcb6ff;
+  font-size: 18pt;
+  margin-left: 0.5em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.date-name-el {
+  display: flex;
+  color: #bcb6ff;
+  margin-right: 0.5em;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+.content-box {
+  background-color: #bcb6ff;
+  border: #474954 2px solid;
+  color: #474954;
+  padding-left: 0.5em;
+  padding-bottom: 1em;
+  padding-top: 1em;
+}
