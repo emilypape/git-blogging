@@ -1,0 +1,15 @@
+<div class='single-post-list-box'>
+  {{#each post}}
+    <div class='single-post-list'>
+      <div class='title-box'>
+        <div class='title-el'>
+          <div>{{title}}</div>
+        </div>
+        <div class='date-name-el'>
+          <div class='posted-by'>Posted by {{username}} </div>
+          <div> on {{created_at}}</div>
+        </div>
+    </div>
+  {{/each}}
+</div>
+<button class="new-post-btn">New Post</button>

@@ -134,3 +134,34 @@
   padding-bottom: 1em;
   padding-top: 1em;
 }
+
+.new-post-btn {
+  position: fixed;
+  bottom: 1.5em;
+  background-color: #474954;
+  color: #bcb6ff;
+  font-size: 14pt;
+  border-radius: 5px;
+  padding: 0.5em;
+}
+
+/* create new post*/
+
+.create-btn {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #474954;
+  color: #bcb6ff;
+  font-size: 14pt;
+  margin-top: 1em;
+}
+
+.form-text-content {
+  padding: 2rem;
+}
+
+.create-post-form {
+  background-color: #bcb6ff;
+  padding: 0.78rem;
+  border: #474954 solid 2px;
+}
