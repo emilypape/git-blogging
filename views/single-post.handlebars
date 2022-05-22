@@ -1,0 +1,48 @@
+<div class='single-post-list-box'>
+  <div class='single-post-list'>
+    <div class='title-box'>
+      <div class='title-el'>
+        <div>{{post.title}}</div>
+      </div>
+      <div class='date-name-el'>
+        <div class='posted-by'>Posted by {{post.user.username}} </div>
+        <div> on {{post.createdAt}}</div>
+      </div>
+    </div>
+    <div class='content-box'>
+      <div class='content-text'>{{post.post_content}}</div>
+    </div>
+  </div>
+</div>
+{{! post all the comments for the post }}
+{{#each post.comments}}
+  <div class='single-post-list-box'>
+    <div class='single-post-list'>
+      <div class='title-box'>
+        <div class='title-el'>
+          <div>{{user.username}}</div>
+        </div>
+        <div class='date-name-el'>
+          <div>{{createdAt}}</div>
+        </div>
+      </div>
+      <div class='content-box'>
+        <div class='content-text'>{{comment_text}}</div>
+      </div>
+    </div>
+  </div>
+{{/each}}
+{{! create an input box for commenting }}
+<div class='single-post-list-box'>
+  <div class='single-post-list'>
+    <div class='title-box'>
+      <div class='title-el'>
+      </div>
+    </div>
+    <div class='content-box'>
+      <label class='comment-label' for='comment'>Comment:</label>
+      <input class='comment-input-box' type='text' id='comment-input' name='comment' placeholder='add comment here' />
+      <button class='comment-submit-btn'>Submit</button>
+    </div>
+  </div>
+</div>

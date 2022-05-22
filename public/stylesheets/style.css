@@ -174,3 +174,23 @@
   flex-direction: column;
   justify-content: center;
 }
+
+/* single post with comments style */
+.comment-input-box {
+  width: 99%;
+  height: 3.5rem;
+}
+
+.comment-submit-btn {
+  width: 99%;
+  padding: 0.5rem;
+  background-color: #474954;
+  color: #bcb6ff;
+  font-size: 14pt;
+  margin-top: 0.5rem;
+}
+
+.comment-label {
+  font-size: 16pt;
+  font-weight: bold;
+}
