@@ -94,7 +94,9 @@
 
 .single-post-list-box {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .single-post-list {
@@ -164,4 +166,11 @@
   background-color: #bcb6ff;
   padding: 0.78rem;
   border: #474954 solid 2px;
+}
+
+/* dashboard  */
+.dashboard-list-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }

@@ -1,7 +1,7 @@
 const usernameInput = document.querySelector('#username-signup');
 const passwordInput = document.querySelector('#password-signup');
 const signupBtn = document.querySelector('#signup-btn');
-const loginRedirect = document.querySelector('#login-redirect');
+const loginRedirects = document.querySelector('#login-redirect');
 
 async function singupFormHandler(event) {
   event.preventDefault();
@@ -31,4 +31,4 @@ function loginPage() {
 }
 
 signupBtn.addEventListener('click', singupFormHandler);
-loginRedirect.addEventListener('click', loginPage);
+loginRedirects.addEventListener('click', loginPage);

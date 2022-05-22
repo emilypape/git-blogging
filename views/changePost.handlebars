@@ -1,19 +1,21 @@
+
 <div class='login-box'>
   <div class='login-text'>Edit Post</div>
   <form class='create-post-form'>
     <div>
       <div class='username-box'>
         <label class='form-text' for='username-login'>Title:</label>
-        <input type='text' id='title-input' class='username-login' />
+        <input type='text' id='title-input' class='username-login' value="{{post.title}}"></input>
       </div>
       <div class='password-box'>
         <label class='form-text' for='password-login'>Content:</label>
-        <input type='text' class='form-text-content' id='content-input' />
+        <input type='text' class='form-text-content' id='content-input' value="{{post.content}}"/>
       </div>
       <div>
-        <button class='create-btn' id='update-btn' type='submit'>Update</button>
-        <button class='create-btn' id='delete-btn' type='submit'>Delete</button>
+        <button postId="{{post.postId}}" class='create-btn' id='update-btn' type='submit'>Update</button>
+        <button postId="{{post.postId}}" class='create-btn' id='delete-btn' type='submit'>Delete</button>
       </div>
     </div>
   </form>
 </div>
+<script src='/javascript/editPost.js'></script>

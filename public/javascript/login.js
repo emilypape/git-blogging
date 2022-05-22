@@ -20,7 +20,7 @@ async function loginFormHandler(event) {
     });
 
     if (response.ok) {
-      console.log('logged in');
+      window.location.replace('/homepage');
     } else {
       alert(response.statusText);
     }
