@@ -11,6 +11,7 @@ async function logout() {
 
   if (response.ok) {
     console.log('logged out');
+    window.location.replace('/login');
   } else {
     alert(response.statusText);
   }
