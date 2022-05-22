@@ -20,6 +20,7 @@ async function singupFormHandler(event) {
     });
     if (response.ok) {
       console.log('success');
+      window.location.replace('/homepage');
     } else {
       alert(response.statusText);
     }
