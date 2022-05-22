@@ -28,6 +28,7 @@ router.get('/homepage', (req, res) => {
         content: item.post_content,
         created_at: item.createdAt.toLocaleDateString(),
         username: item.user.username,
+        postId: item.id,
       };
     });
     res.render('homepage', {

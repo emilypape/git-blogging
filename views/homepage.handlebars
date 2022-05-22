@@ -1,6 +1,6 @@
 <div class='single-post-list-box'>
   {{#each post}}
-    <div class='single-post-list'>
+    <div postId='{{postId}}' id='single-post' class='single-post-list'>
       <div class='title-box'>
         <div class='title-el'>
           <div>{{title}}</div>
@@ -16,3 +16,4 @@
     </div>
   {{/each}}
 </div>
+<script src='/javascript/homepage.js'></script>
