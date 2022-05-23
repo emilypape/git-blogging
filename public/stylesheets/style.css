@@ -147,6 +147,11 @@
   padding: 0.5em;
 }
 
+.submit-btn-box {
+  display: flex;
+  justify-content: center;
+}
+
 /* create new post*/
 
 .create-btn {
@@ -173,6 +178,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 /* single post with comments style */

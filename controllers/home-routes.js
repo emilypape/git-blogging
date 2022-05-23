@@ -12,7 +12,7 @@ router.get('/signup', (req, res) => {
 });
 
 // homepage handlebars
-router.get('/homepage', (req, res) => {
+router.get('/', (req, res) => {
   Post.findAll({
     attributes: ['id', 'title', 'post_content', 'createdAt'],
     include: [
@@ -33,12 +33,17 @@ router.get('/homepage', (req, res) => {
     });
     res.render('homepage', {
       post,
+      loggedIn: req.session.loggedIn,
     });
   });
 });
 
 // dashboard handlebars
 router.get('/dashboard', (req, res) => {
+  if (!req.session.user_id) {
+    res.redirect('/login');
+    return;
+  }
   Post.findAll({
     where: {
       user_id: req.session.user_id,
@@ -62,6 +67,7 @@ router.get('/dashboard', (req, res) => {
     });
     res.render('dashboard', {
       post,
+      loggedIn: req.session.loggedIn,
     });
   });
 });
@@ -88,6 +94,7 @@ router.get('/update/:id', (req, res) => {
     });
     res.render('changePost', {
       post: post[0],
+      loggedIn: req.session.loggedIn,
     });
   });
 });

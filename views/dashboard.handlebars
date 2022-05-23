@@ -1,7 +1,7 @@
 {{#each post}}
-<div postId = '{{id}}' id='user-posts' class='dashboard-list-box'>
-  <div class='single-post-list'>
-    <div class='title-box'>
+  <div postId='{{id}}' id='user-posts' class='dashboard-list-box'>
+    <div class='single-post-list'>
+      <div class='title-box'>
         <div class='title-el'>
           <div>{{title}}</div>
         </div>
@@ -9,9 +9,11 @@
           <div class='posted-by'>Posted by {{username}} </div>
           <div> on {{created_at}}</div>
         </div>
+      </div>
     </div>
   </div>
-</div>
 {{/each}}
-<button id="new-post-btn" class="new-post-btn">New Post</button>
-<script src="/javascript/dashboard.js"></script>
+<div class='submit-btn-box'>
+  <button id='new-post-btn' class='new-post-btn'>New Post</button>
+</div>
+<script src='/javascript/dashboard.js'></script>

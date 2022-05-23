@@ -19,10 +19,10 @@ async function loginFormHandler(event) {
       headers: { 'Content-Type': 'application/json' },
     });
 
-    if (response.ok) {
-      window.location.replace('/homepage');
-    } else {
+    if (!response.ok) {
       alert(response.statusText);
+    } else {
+      window.location.replace('/');
     }
   }
 }

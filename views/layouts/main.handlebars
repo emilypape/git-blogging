@@ -11,8 +11,12 @@
       <div class='nav-box'>
         <div id='homepage-el' class='home nav'>Home</div>
         <div id='dashboard-el' class='dashboard nav'>Dashboard</div>
-        <div id='login-el' class='logout nav'>Login</div>
-        <div id='logout-el' class='logout nav'>Logout</div>
+        {{#unless loggedIn}}
+          <div id='login-el' class='logout nav'>Login</div>
+        {{/unless}}
+        {{#if loggedIn}}
+          <div id='logout-el' class='logout nav'>Logout</div>
+        {{/if}}
       </div>
       <div class='blog-title'>Git Blogging</div>
     </nav>

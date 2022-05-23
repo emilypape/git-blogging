@@ -23,28 +23,28 @@ router.post('/', (req, res) => {
 });
 
 // login
-router.post('/login', (req, res) => {
-  User.findOne({
+router.post('/login', async function login(req, res) {
+  const dbUserData = await User.findOne({
     where: {
       username: req.body.username,
     },
-  }).then((dbUserData) => {
-    if (!dbUserData) {
-      res.status(400).json({ message: 'There is no user with this username.' });
-      return;
-    }
-    // verify user
-    const validPassword = dbUserData.checkPassword(req.body.password);
-    if (!validPassword) {
-      res.status(400).json({ message: 'Invalid Password!' });
-      return;
-    }
+  });
+  if (!dbUserData) {
+    res.status(400).json({ message: 'There is no user with this username.' });
+    return;
+  }
+  // verify user
+  const validPassword = dbUserData.checkPassword(req.body.password);
+  if (!validPassword) {
+    res.status(400).json({ message: 'Invalid Password!' });
+    return;
+  }
 
-    req.session.save(() => {
-      req.session.user_id = dbUserData.id;
-      req.session.username = dbUserData.username;
-      req.session.loggedIn = true;
-    });
+  req.session.save(() => {
+    req.session.user_id = dbUserData.id;
+    req.session.username = dbUserData.username;
+    req.session.loggedIn = true;
+    res.status(200).json({ message: 'Logged In!' });
   });
 });
 
@@ -54,7 +54,7 @@ router.post('/logout', (req, res) => {
       res.status(204).end();
     });
   } else {
-    res.status(404).end();
+    res.status(400).end();
   }
 });
 

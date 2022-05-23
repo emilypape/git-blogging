@@ -33,17 +33,19 @@
   </div>
 {{/each}}
 {{! create an input box for commenting }}
-<div class='single-post-list-box'>
-  <div class='single-post-list'>
-    <div class='title-box'>
-      <div class='title-el'>
+{{#if loggedIn}}
+  <div class='single-post-list-box'>
+    <div class='single-post-list'>
+      <div class='title-box'>
+        <div class='title-el'>
+        </div>
+      </div>
+      <div class='content-box'>
+        <label class='comment-label' for='comment'>Comment:</label>
+        <input class='comment-input-box' type='text' id='comment-input' name='comment' placeholder='add comment here' />
+        <button postId='{{post.id}}' class='comment-submit-btn' id='comment-submit-btn'>Submit</button>
       </div>
     </div>
-    <div class='content-box'>
-      <label class='comment-label' for='comment'>Comment:</label>
-      <input class='comment-input-box' type='text' id='comment-input' name='comment' placeholder='add comment here' />
-      <button postId='{{post.id}}' class='comment-submit-btn' id='comment-submit-btn'>Submit</button>
-    </div>
   </div>
-</div>
+{{/if}}
 <script src='/javascript/single-post.js'></script>

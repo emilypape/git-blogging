@@ -26,10 +26,14 @@ function dashboardRedirect() {
 }
 
 function homepageRedirect() {
-  window.location.replace('/homepage');
+  window.location.replace('/');
 }
 
-logoutEl.addEventListener('click', logout);
-loginEl.addEventListener('click', loginRedirect);
+if (logoutEl) {
+  logoutEl.addEventListener('click', logout);
+}
+if (loginEl) {
+  loginEl.addEventListener('click', loginRedirect);
+}
 dashboardEl.addEventListener('click', dashboardRedirect);
 homeEl.addEventListener('click', homepageRedirect);
