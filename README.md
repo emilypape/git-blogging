@@ -1,6 +1,6 @@
 # git-blogging
 
-Git blogging is a tech blog site that allows users to post, update and delete tech content and also interact with other posts and users through comments!
+Git Blogging is a tech blog site that allows users to post, update and delete tech content and also interact with other posts and users through comments!
 
 Deployed Action Link:
 
